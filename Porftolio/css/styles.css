@@ -1,0 +1,351 @@
+/* -------------------------- */
+/* Cores e Variáveis Globais */
+/* -------------------------- */
+:root {
+  --bs-primary: #2c3e50; /* Azul escuro */
+  --bs-secondary: #6c757d; /* Cinza */
+  --bs-success: #198754; /* Verde */
+  --bs-info: #0dcaf0; /* Azul claro */
+  --bs-warning: #ffc107; /* Amarelo */
+  --bs-danger: #dc3545; /* Vermelho */
+  --bs-light: #f8f9fa; /* Branco claro */
+  --bs-dark: #212529; /* Preto */
+  --bs-link-color: #2c3e50; /* Cor dos links */
+  --bs-link-hover-color: #1a252f; /* Cor dos links ao passar o mouse */
+}
+
+/* -------------------------- */
+/* Reset de Margens e Paddings */
+/* -------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e borda sejam incluídos no tamanho total */
+}
+
+/* -------------------------- */
+/* Corpo da Página */
+/* -------------------------- */
+body {
+  font-family: 'Muli', sans-serif; /* Fonte padrão */
+  color: var(--bs-dark); /* Cor padrão do texto */
+  background-color: #fff; /* Fundo branco */
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------- */
+/* Links */
+/* -------------------------- */
+a {
+  color: var(--bs-link-color); /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+}
+a:hover {
+  color: var(--bs-link-hover-color); /* Cor dos links ao passar o mouse */
+}
+
+/* -------------------------- */
+/* Títulos */
+/* -------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Saira Extra Condensed", sans-serif; /* Fonte específica para títulos */
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamanho grande para o título principal */
+  color: var(--bs-dark); /* Cor escura */
+}
+
+h2 {
+  font-size: 2rem; /* Tamanho menor que h1 */
+  color: var(--bs-primary); /* Azul escuro */
+}
+
+h3 {
+  font-size: 1.75rem; /* Tamanho menor que h2 */
+}
+
+p {
+  font-size: 1rem; /* Tamanho do parágrafo */
+  line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+}
+
+/* -------------------------- */
+/* Barra Lateral - Navbar */
+/* -------------------------- */
+#sideNav {
+  background-color: var(--bs-primary); /* Cor de fundo azul escuro */
+  padding-top: 20px;
+  height: 100%; /* Ocupa toda a altura da tela */
+  position: fixed;
+  width: 250px; /* Largura da barra lateral */
+  left: 0;
+  top: 0;
+  z-index: 1030; /* Garante que fique sobre outros elementos */
+}
+
+.nav-link {
+  color: var(--bs-light); /* Cor clara para os links */
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+.nav-link:hover {
+  color: var(--bs-secondary); /* Cor cinza ao passar o mouse */
+}
+
+.navbar-brand img {
+  border-radius: 50%; /* Imagem circular */
+  max-width: 120px; /* Limita o tamanho da imagem */
+  margin-bottom: 15px;
+}
+
+.navbar-brand::after {
+  content: ''; /* Remove o ponto desnecessário */
+}
+
+/* -------------------------- */
+/* Imagem de Perfil */
+/* -------------------------- */
+.img-profile {
+  max-width: 120px; /* Tamanho máximo da imagem de perfil */
+  border-radius: 50%; /* Forma circular */
+}
+
+/* Centraliza a imagem de perfil no navbar */
+.navbar-brand {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 100%; /* Garante que ocupe toda a largura */
+}
+
+/* -------------------------- */
+/* Seção do Perfil */
+/* -------------------------- */
+.subheading {
+  font-size: 1.25rem; /* Tamanho da subheading */
+  color: var(--bs-secondary); /* Cor cinza */
+}
+
+/* -------------------------- */
+/* Títulos das Seções */
+/* -------------------------- */
+.resume-section h2 {
+  font-size: 2rem; /* Tamanho do título das seções */
+  color: var(--bs-primary); /* Azul escuro */
+  margin-bottom: 20px; /* Margem inferior */
+}
+
+/* -------------------------- */
+/* Redes Sociais */
+/* -------------------------- */
+.social-icons img {
+  max-width: 30px; /* Tamanho máximo dos ícones */
+  margin-right: 10px; /* Espaçamento entre ícones */
+}
+
+/* -------------------------- */
+/* Habilidades (Skills) */
+/* -------------------------- */
+.dev-icons i {
+  font-size: 2rem; /* Tamanho dos ícones */
+  color: var(--bs-primary); /* Azul escuro */
+}
+
+/* -------------------------- */
+/* Parágrafos de Destaque */
+/* -------------------------- */
+p.lead {
+  margin-bottom: 1.5rem; /* Margem maior nos parágrafos principais */
+}
+
+/* -------------------------- */
+/* Tabelas */
+/* -------------------------- */
+.resume-section .table {
+  border-collapse: collapse;
+  width: 100%; /* Tabela ocupa toda a largura */
+}
+
+.resume-section .table th, 
+.resume-section .table td {
+  border: 1px solid #ddd; /* Bordas das células */
+  padding: 8px;
+}
+
+.resume-section .table th {
+  background-color: var(--bs-primary); /* Fundo azul nos títulos */
+  color: white;
+  text-align: left;
+}
+
+/* -------------------------- */
+/* Ajustes Gerais de Margem e Padding */
+/* -------------------------- */
+.container-fluid {
+  padding: 0 30px; /* Padding horizontal */
+}
+
+section.resume-section {
+  padding: 40px 0; /* Padding nas seções */
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd; /* Linha horizontal discreta */
+  margin: 20px 0; /* Margem vertical */
+}
+
+/* -------------------------- */
+/* Estilos Customizados para as Seções */
+/* -------------------------- */
+.resume-section-content {
+  margin-left: 270px; /* Espaço para a barra lateral */
+  padding: 20px; /* Padding interno */
+}
+
+.resume-section h3 {
+  font-size: 1.5rem; /* Tamanho dos títulos h3 */
+  color: var(--bs-dark); /* Cor escura */
+  margin-bottom: 10px;
+}
+
+.resume-section p {
+  font-size: 1rem; /* Tamanho do texto dos parágrafos */
+  color: var(--bs-dark);
+  margin-bottom: 10px;
+}
+
+/* -------------------------- */
+/* Certificações */
+/* -------------------------- */
+.resume-section-content-certification {
+  text-align: center; /* Centraliza o conteúdo das certificações */
+}
+
+.certification-item {
+  width: 250px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e2e2e2; /* Fundo cinza claro */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra discreta */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* Altura fixa */
+}
+
+.cert-title {
+  font-size: 1.5rem; /* Tamanho do título da certificação */
+  font-weight: 700; /* Negrito */
+  color: #000000 !important;
+  margin-bottom: 10px;
+}
+
+.cert-image-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px; /* Altura máxima das imagens */
+}
+
+.cert-image {
+  max-width: 100%; /* Tamanho máximo da imagem */
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.cert-provider {
+  font-size: 1rem;
+  font-weight: bold; /* Negrito para o nome da empresa */
+  color: #000000 !important;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* -------------------------- */
+/* Layout Certificações */
+/* -------------------------- */
+.d-flex {
+  display: flex;
+  justify-content: center; /* Centraliza as certificações */
+  flex-wrap: wrap; /* Quebra as certificações em várias linhas, se necessário */
+}
+
+.mx-3 {
+  margin-left: 15px;
+  margin-right: 15px; /* Espaçamento horizontal entre as certificações */
+}
+
+/* -------------------------- */
+/* Responsividade */
+/* -------------------------- */
+@media (max-width: 768px) {
+  #sideNav {
+    position: relative;
+    width: 100%; /* Barra lateral ocupa 100% em telas pequenas */
+  }
+
+  .resume-section-content {
+    margin-left: 0; /* Remove o espaço lateral em telas pequenas */
+  }
+
+  .navbar-brand img {
+    max-width: 80px; /* Diminui o tamanho da imagem em telas pequenas */
+  }
+}
+
+/* Badge Item (individual) */
+.badge-item {
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 350px;
+}
+
+/* Container da Imagem do Badge */
+.badge-image-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 200px; /* Defina a altura do container da imagem */
+  margin-bottom: 15px;
+}
+
+/* Imagem dos Badges */
+.badge-image {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
+  border-radius: 5px;
+}
+
+/* Título dos Badges */
+.badge-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* -------------------------- */
+/* Rodapé */
+/* -------------------------- */
+footer {
+  background-color: var(--bs-primary); /* Fundo azul */
+  color: var(--bs-light); /* Texto claro */
+  text-align: center;
+  padding: 10px 0;
+}
